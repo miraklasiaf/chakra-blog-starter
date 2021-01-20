@@ -1,16 +1,17 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui";
-import { Header } from "./Header";
+import { Box } from '@chakra-ui/react'
+import Header from './Header'
 
 export interface LayoutProps {
-	children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export function Layout({ children }: LayoutProps) {
-	return (
-		<div sx={{ maxWidth: "container", mx: "auto", px: 3, py: 3, mb: 8 }}>
-			<Header />
-			<main>{children}</main>
-		</div>
-	);
+  return (
+    <Box maxWidth="6xl" mx="auto" p="3" mb="8">
+      <Header />
+      <Box as="main" mt={16}>
+        {children}
+      </Box>
+    </Box>
+  )
 }

@@ -1,21 +1,19 @@
-import { ThemeProvider } from "theme-ui";
-import { AppProps } from "next/app";
+import { ChakraProvider } from '@chakra-ui/react'
+import { AppProps } from 'next/app'
+import theme from '../theme'
 
-import theme from "../theme";
-
-// so we can use it again for the mdx provider.
 export interface AppThemeProvider {
-	children: React.ReactNode;
+  children: React.ReactNode
 }
 
 export function AppThemeProvider({ children }: AppThemeProvider) {
-	return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+  return <ChakraProvider theme={theme}>{children}</ChakraProvider>
 }
 
 export default function MyApp({ Component, pageProps }: AppProps) {
-	return (
-		<AppThemeProvider>
-			<Component {...pageProps} />
-		</AppThemeProvider>
-	);
+  return (
+    <AppThemeProvider>
+      <Component {...pageProps} />
+    </AppThemeProvider>
+  )
 }

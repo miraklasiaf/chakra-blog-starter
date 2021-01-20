@@ -11,7 +11,12 @@
     "typescript": "tsc"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^1.0.3",
+    "@chakra-ui/react": "^1.1.5",
+    "@emotion/react": "^11.1.4",
+    "@emotion/styled": "^11.0.0",
     "date-fns": "2.10.0",
+    "framer-motion": "^3.2.1",
     "gray-matter": "^4.0.2",
     "next": "10.0.2",
     "next-mdx-remote": "^1.0.0",

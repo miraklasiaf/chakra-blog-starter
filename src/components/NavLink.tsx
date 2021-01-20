@@ -1,27 +1,23 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui";
-import { useRouter } from "next/router";
-import Link from "next/link";
-import { ThemeUICSSObject } from "theme-ui";
+import NextLink from 'next/link'
+import { chakra, HTMLChakraProps, useColorModeValue } from '@chakra-ui/react'
 
-// based on: https://github.com/vercel/next.js/blob/master/examples/active-class-name/components/ActiveLink.js
-// I think this should be a reusable package.
+export const NavLink = (props: HTMLChakraProps<'a'>) => {
+  const { href, ...rest } = props
 
-export interface NavLinkProps {
-	href: string;
-	children: React.ReactNode;
-	linkSx: ThemeUICSSObject;
-	activeSx?: ThemeUICSSObject;
+  return (
+    <NextLink href={href} passHref>
+      <chakra.a
+        display="block"
+        py="1"
+        px="3"
+        borderRadius="full"
+        color={useColorModeValue('gray.600', 'whiteAlpha.800')}
+        fontWeight="normal"
+        _hover={{ bg: useColorModeValue('gray.100', 'whiteAlpha.100') }}
+        {...rest}
+      />
+    </NextLink>
+  )
 }
 
-export function NavLink({ href, children, linkSx, activeSx }: NavLinkProps) {
-	const { asPath } = useRouter();
-
-	const addedSx = asPath === href ? activeSx : {};
-
-	return (
-		<Link href={href} passHref>
-			<a sx={{ ...linkSx, ...addedSx }}>{children}</a>
-		</Link>
-	);
-}
+export default NavLink
