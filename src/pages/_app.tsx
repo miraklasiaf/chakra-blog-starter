@@ -1,6 +1,7 @@
 import { ChakraProvider } from '@chakra-ui/react'
 import { AppProps } from 'next/app'
 import theme from '../theme'
+import '../styles/font.css'
 
 export interface AppThemeProvider {
   children: React.ReactNode

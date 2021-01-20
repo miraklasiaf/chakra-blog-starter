@@ -16,7 +16,7 @@ export default function Index() {
             This is my cool website.
           </Heading>
           <Text fontSize="md" mt="10">
-            My cool website has a dark mode and a blog and uses Nextjs.
+            My cool website and a blog and uses Nextjs.
           </Text>
         </Box>
       </Layout>

@@ -1,4 +1,4 @@
-import { theme as defaultTheme } from '@chakra-ui/react'
+import { extendTheme } from '@chakra-ui/react'
 import { mode, Styles } from '@chakra-ui/theme-tools'
 
 const styles: Styles = {
@@ -24,9 +24,11 @@ const styles: Styles = {
   })
 }
 
-export const theme = {
-  ...defaultTheme,
-  styles
-}
-
-export default theme
+export default extendTheme({
+  styles,
+  fonts: {
+    heading: `Inter,-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    body: `Inter,-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"`,
+    mono: `SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace`
+  }
+})

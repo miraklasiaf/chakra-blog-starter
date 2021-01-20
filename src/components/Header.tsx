@@ -1,6 +1,5 @@
 import * as React from 'react'
 import { useViewportScroll } from 'framer-motion'
-import ThemeSwitcher from './theme-switcher'
 import { NavLink } from './NavLink'
 import { Flex, Box, HStack, useColorModeValue } from '@chakra-ui/react'
 import { CMS_NAME } from '../pages'
@@ -13,10 +12,6 @@ const HeaderContent = () => {
           <NavLink href="/">{CMS_NAME}</NavLink>
           <NavLink href="/blog">Blog</NavLink>
         </HStack>
-      </Flex>
-
-      <Flex maxW="720px" align="center" color="gray.400">
-        <ThemeSwitcher />
       </Flex>
     </Flex>
   )

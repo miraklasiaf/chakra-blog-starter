@@ -23,7 +23,7 @@ export const Markdown = {
   th: THead,
   td: TData,
   kbd: Kbd,
-  inlineCode: (props) => <Code variantColor="yellow" fontSize="0.84em" {...props} />
+  inlineCode: (props) => <Code colorScheme="yellow" fontSize="0.84em" {...props} />
 }
 
 export default Markdown
