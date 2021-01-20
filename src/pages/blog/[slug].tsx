@@ -38,7 +38,7 @@ export default function Post({ post, source }: PostProps) {
             {title}
           </Heading>
           <DateFormatter dateString={dateString} />
-          <div>{content}</div>
+          <Box>{content}</Box>
         </article>
       </Layout>
     </>
